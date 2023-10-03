@@ -239,9 +239,7 @@ nav{
     .nav-items{
         gap: 2em;
     }
-    body{
-        background-color: var(--almost-white);
-    }
+
     .learn-more:hover{
         background-color: transparent;
         color: var(--almost-black);
