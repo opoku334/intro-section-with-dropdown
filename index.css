@@ -1,0 +1,257 @@
+:root{
+    --almost-white:hsl(0,0%,98%);
+    --medium-gray:hsl(0,0%,41%);
+    --almost-black:hsl(0,0%,8%);
+    font-size: 1.125em;
+    font-family: 'Epilogue',sans-serif;
+    box-sizing: border-box;
+    
+
+}
+*,::before,::after{
+    box-sizing: inherit;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--almost-black);
+}
+img{
+    max-width: 100%;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.active{
+    background-color: hsla(0,0%,41%,30%);
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1em;
+
+}
+.nav-menu{
+
+    position: fixed;
+    top: 0em;
+    padding: 1em;
+    right: 0;
+    width: 60vw;
+    height: 100vh;
+    background-color: white;
+
+
+}
+
+/* .backdropping{
+    position: absolute;
+    background-color: rgba(0,0,0,0.2);
+    height: 100vh;
+    top: 0em;
+    width: 100%;
+} */
+.nav-list,.nav-items,.dropdown,.nav-button,.main-body{
+    display: flex;
+    flex-direction: column;
+}
+.toggle-menu{
+    align-self: flex-end;
+}
+.nav-list > *{
+    margin-bottom: 1em;
+}
+
+.nav-items,.dropdown{
+    padding: 1em;
+    gap: 1em;
+}
+.dropdown li a,.main-logo{
+    display: flex;
+    gap: 0.7em;
+    align-items: center;
+}
+.nav-button{
+    align-items: center;
+    gap: 1em;
+
+
+
+}
+.nav-button .register{
+    padding: 0.8em 1.3em;
+    width: 100%;
+    border-radius: 1em;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.main{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2em;
+    
+    align-items: center;
+}
+.main-body{
+    text-align: center;
+    font-size: 0.9rem;
+    gap: 2em;
+    padding: 1em;
+}
+.learn-more{
+    padding: 1em 1.5em;
+    background-color: black;
+    color: white;
+    border-radius: 1em;
+}
+.main-body p{
+    line-height: 1.5;
+}
+.main-logo{
+    justify-content: center;
+}
+.visible{
+    display: none;
+}
+.nav-items li{
+    cursor: pointer;
+}
+
+
+.attribution { font-size: 1.125rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media screen and (min-width:64rem) {
+
+    .nav-menu{
+        position: static;
+        background-color: transparent;
+        display: flex;
+        
+        height: inherit;
+    }
+    .nav-items,.nav-list,.nav-button{
+        flex-direction: row;
+    }
+    .nav-menu,.nav-list{
+
+        width:100%
+    }
+    .toggle-menu,.toggler{
+        display: none;
+
+    }
+    nav{
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1em;
+    
+        
+    }
+    .nav-button{
+        margin-left: auto;
+    }
+    .nav-list > *{
+        margin-bottom: 0;
+        
+        
+    }
+    .nav-items li{
+        position: relative;
+    }
+    .dropdown{
+        position: absolute;
+        background-color: white;
+        top: 2em;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        border-radius: 0.5em;
+
+        
+
+        
+
+    
+    }
+    .features-dropdown{
+        left: -5em;
+    }
+    .company-dropdown{
+        width: 9em;
+        padding: 1em 0.5em;
+        left: -1em;
+    
+        align-items: center;
+    }
+    .active{
+        background-color: transparent;
+    }
+    header{
+        padding:1em 3em;
+    }
+    .main{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr;
+        max-width: 1080px;
+        padding: 1em;
+        margin:0  auto;
+        grid-gap: 4em;
+    
+        
+    }
+    .main > div{
+        flex: 1;
+    }
+    .main-body{
+        height: 100%;
+        flex-direction: column;
+        padding-top: 9em;
+        font-size: 1.125rem;
+        text-align: start;
+        justify-content: space-between;
+    
+      
+    }
+    .main-body h1{
+        font-size: 3rem;
+    }
+    .nav-items{
+        gap: 2em;
+    }
+    body{
+        background-color: var(--almost-white);
+    }
+    .learn-more:hover{
+        background-color: transparent;
+        color: var(--almost-black);
+        border: 1px solid var(--almost-black);
+    }
+    .nav-button{
+        gap: 3em;
+    }
+   
+
+
+   
+}
